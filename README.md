@@ -1,32 +1,20 @@
 # Team WWU_Muenster 2022 Software Tool
 
-If you team competes in the [**Software & AI** track](https://competition.igem.org/participation/tracks) or wants to
-apply for the [**Best Software Tool** Award](https://competition.igem.org/judging/awards), you **MUST** host all the
-code of your team's software tool in this repository, `main` branch. By the **Wiki Freeze**, a
-[release](https://docs.gitlab.com/ee/user/project/releases/) will be automatically created as the judging artifact of
-this software tool. You will be able to keep working on your software after the Grand Jamboree.
-
-> If your team does not have any software tool, you can totally ignore this repository. If left unchanged, this
-repository will be automatically deleted by the end of the season.
-
-
-
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might
-be unfamiliar with (for example your team wiki). A list of Features or a Background subsection can also be added here.
-If there are alternatives to your project, this is a good place to list differentiating factors.
+
+### Introduction:
+The goal of metabolic engineering for industrial applications is the overproduction of metabolites with the help of organisms. While the field originated from single modifications in metabolic pathways, today’s approaches for metabolic engineering include a much more systematic view on biological systems. This is largely fueled by advances in computational methods ([Woolston, Edgar and Stephanopoulos, 2013](https://www.annualreviews.org/doi/10.1146/annurev-chembioeng-061312-103312)). One of most prominent computational methods in metabolic engineering is flux balance analysis (FBA) of genome-scale metabolic models (GSMMs). In brief, GSMMs are mathematical representations of all known chemical reactions within an organism. FBA calculates the respective fluxes through all the reactions of a GSMM, based on certain mathematical constraints ([Orth, Thiele and Palsson, 2010](https://www.nature.com/articles/nbt.1614#MOESM178)). To learn more about the general background of FBA and GSMMs, take a look at our [modeling page](https://2022.igem.wiki/wwu-muenster/model). 
+Many FBA- and GSMM-based tools are available to find genetic targets for metabolic engineering. Most available software tools, however, focus on predicting gene knockout effects and do not include the identification of putative gene amplification targets. Flux scanning based on enforced objective flux (FSEOF) is a prominent algorithm for identifying gene amplification targets and has been successfully used to optimize cell factories ([Choi et al., 2010](https://journals.asm.org/doi/10.1128/AEM.00115-10); [Park et al., 2012](https://journals.asm.org/doi/10.1128/AEM.00115-10)). As no stand-alone FSEOF software tool is currently available and, to the best of our knowledge, no public code repositories can be found online, we decided to develop a user-friendly command line tool that utilizes the FSEOF algorithm for the identification of genetic overexpression and downregulation targets. 
+
+### Considerations:
+When we started to apply FBA- and GSMMs-based tools for the modeling of our MonChassis yeast strains, we quickly experienced that the available tools and methods can be difficult to use if you do not have any experience with FBA and GSMMs. Many tools are available in the COBRA toolbox for MATLAB. However, the usage of the COBRA toolbox requires a MATLAB license and knowledge in the MATLAB programming language. Even though iGEM teams had free access to MATLAB for the period of their project in the recent years, many members of the iGEM community could benefit from free access to software tools for metabolic engineering after their iGEM project ends. Hence, we wanted our software to be as accessible as possible and easy to use, especially for users with only little experience with FBA and GSMMs. We aimed that our software can be used without knowledge in programming and only to be fully build on the foundation of open-source libraries.
+
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew.
-However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing
-specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a
-specific context like a particular programming language version or operating system or has dependencies that have to be
-installed manually, also add a Requirements subsection.
+
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of
-usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably
-include in the README.
+
 
 ## Contributing
 State if you are open to contributions and what your requirements are for accepting them.
