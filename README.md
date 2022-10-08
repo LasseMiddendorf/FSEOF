@@ -23,10 +23,10 @@ When we started to apply FBA- and GSMMs-based tools for the modeling of our MonC
 > - **MacOS:** Open the parent folder in the finder – right-click on the "wwu-muenster-main" folder – select "New terminal at Folder"
  7. In the now opened terminal window type in the following line and press enter. **This is only necessary for the first time you use the tool!**
     
-   ~~~~ pip install -r requirements.txt~~~~
+    ´pip install -r requirements.txt´
   
-8. Type in ~~~python run_FSEOF.py NameOfYourSBMLFile BiomassID reactionID~~~ and press enter. The results are stored in an excel file
-> **Example:** ~~~python run_FSEOF.py yeast_gem.xml r_4041 r_4269~~~~
+8. Type in ´python run_FSEOF.py NameOfYourSBMLFile BiomassID reactionID´ and press enter. The results are stored in an excel file
+> **Example:** ´python run_FSEOF.py yeast_gem.xml r_4041 r_4269
 
 
 ## Contributing
