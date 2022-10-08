@@ -10,10 +10,23 @@ Many FBA- and GSMM-based tools are available to find genetic targets for metabol
 When we started to apply FBA- and GSMMs-based tools for the modeling of our MonChassis yeast strains, we quickly experienced that the available tools and methods can be difficult to use if you do not have any experience with FBA and GSMMs. Many tools are available in the COBRA toolbox for MATLAB. However, the usage of the COBRA toolbox requires a MATLAB license and knowledge in the MATLAB programming language. Even though iGEM teams had free access to MATLAB for the period of their project in the recent years, many members of the iGEM community could benefit from free access to software tools for metabolic engineering after their iGEM project ends. Hence, we wanted our software to be as accessible as possible and easy to use, especially for users with only little experience with FBA and GSMMs. We aimed that our software can be used without knowledge in programming and only to be fully build on the foundation of open-source libraries.
 
 
-## Installation
+## Installation & Usage
 
-
-## Usage
+    1. Make sure you have python installed on your computer
+    2. Download the FSEOF GitLab repository as a zip file
+    3. Unzip the downloaded zip file
+    4. Move the "wwu-muenster-main" folder to the desired destination on your computer
+    > Note: You can rename the folder if you like
+    5. Paste the .xml file of your SBML model into the folder "wwu-muenster-main"
+    6. Navigate to the folder in the terminal of your computer. Users without knowledge of navigation in the terminal have the following options:
+    > - *** Windows: *** Open the parent folder in the file explorer - Hold "Shift" and right-click on the "wwu-muenster-main" folder – select "Open PowerShell here"
+    > - *** MacOS: *** Open the parent folder in the finder – right-click on the "wwu-muenster-main" folder – select "New terminal at Folder"
+    7. In the now opened terminal window type in the following line and press enter. ***This is only necessary for the first time you use the tool!***
+    ~~~~
+    pip install -r requirements.txt
+    ~~~~
+    8. Type in ~~~python run_FSEOF.py NameOfYourSBMLFile BiomassID reactionID~~~ and press enter. The results are stored in an excel file
+    > *** Example: *** ~~~python run_FSEOF.py yeast_gem.xml r_4041 r_4269~~~~
 
 
 ## Contributing
