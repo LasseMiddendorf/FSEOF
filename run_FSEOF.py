@@ -32,7 +32,7 @@ def main():
     
     f = FSEOF(args.sbmlFile, args.biomassID, args.reactionID)
     f.find_targets(args.steps, useFVA=args.useFVA, constrainBiomass=args.constrainBiomass, maxFluxCutoff=args.changeBiomassConstrain)
-    f.sort_values(useFVA=args.useFVA)
+    f.sort_targets(useFVA=args.useFVA) #This doesn't work!!!
 
     #Save reuslts. Depending on which method was used for the FSEOF algorithm, different information are exported.  
     filename = args.reactionID
