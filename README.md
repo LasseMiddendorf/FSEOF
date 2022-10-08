@@ -33,6 +33,6 @@ When we started to apply FBA- and GSMMs-based tools for the modeling of our MonC
 
 **Lasse Middendorf**
 
-> Email: lasse.m (at) gmx.de
+> lasse.m (at) gmx.de
 > [Twitter](https://twitter.com/LasseMiddendorf)
 > [Linkedin](https://www.linkedin.com/in/lasse-middendorf-7269861a6/)
