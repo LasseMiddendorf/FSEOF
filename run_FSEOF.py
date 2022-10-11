@@ -32,7 +32,7 @@ def main():
     
     f = FSEOF(args.sbmlFile, args.biomassID, args.reactionID)
     f.find_targets(args.steps, useFVA=args.useFVA, constrainBiomass=args.constrainBiomass, maxFluxCutoff=args.changeBiomassConstrain)
-    f.sort_targets(useFVA=args.useFVA)
+    f.addReactionData()
 
     #Save reuslts. Depending on which method was used for the FSEOF algorithm, different information are exported.  
     filename = args.reactionID
@@ -40,13 +40,13 @@ def main():
     if args.useFVA == True:
         f.targets.to_excel(
             "AmplificationTargets_{reaction}.xlsx".format(reaction=filename),
-            columns=["q_slope", "l_sol", "q_slope_classifier", "l_sol_classifier", "reaction_class"]
+            columns=["q_slope", "l_sol", "q_slope_classifier", "l_sol_classifier", "reaction_class", "Reaction", "Compartments"]
         )
     
     else:
         f.targets.to_excel(
             "AmplificationTargets_{reaction}.xlsx".format(reaction=filename),
-            columns=["q_slope"]
+            columns=["q_slope", "Reaction", "Compartments"]
         )
 
 
