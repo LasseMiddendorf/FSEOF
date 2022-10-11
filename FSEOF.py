@@ -190,6 +190,18 @@ class FSEOF():
 
         else:
             self.targets.sort_values("q_slope", ascending=False, inplace=True)
+    
+    
+    def addReactionData(self):
+        metabolites = list()
+        compartments = list()
+
+        for reactionID in list(self.targets.index):
+            metabolites.append(self.model.reactions.get_by_id(reactionID).build_reaction_string(use_metabolite_names=True))
+            compartments.append(self.model.reactions.get_by_id(reactionID).get_compartments())
+        
+        self.targets["Reaction"] = metabolites
+        self.targets["Compartments"] = compartments
 
 
 
